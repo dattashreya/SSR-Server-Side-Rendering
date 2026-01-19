@@ -1,0 +1,13 @@
+  <H1>Signals Example</H1>
+
+  <h2>Build a rectangle</h2>
+  <h3>Height: {{ height() }}, width: {{ width() }}</h3>
+  <h3>Area: {{ area() }}</h3>
+
+  <button (click)="handleClick()">{{ isActive ? "Stop" : " Start" }}</button>
+  <hr />
+  <div
+    style="border: 1px solid brown; background-color: rgba(165, 42, 42, 0.427)"
+    [ngStyle]="{ 'height.px': height(), width: divWidth() }"
+  >
+  </div>
