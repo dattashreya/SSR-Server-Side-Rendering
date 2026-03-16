@@ -1,0 +1,87 @@
+What is SSR ?
+SSR stands for Server-Side Rendering.
+What SSR Means
+Normally in many web apps (like standard Angular, React, etc.), the browser downloads JavaScript and renders the page on the client side.
+With SSR, the server generates the HTML first and sends a fully rendered page to the browser.
+
+How SSR Works
+User requests a page.
+
+
+Server runs the application.
+
+
+Server renders the HTML.
+
+
+The HTML is sent to the browser.
+
+
+JavaScript loads and hydrates the page (makes it interactive).
+
+
+
+Example with Angular
+In Angular Universal (Angular’s SSR solution):
+Without SSR:
+Browser -> gets empty HTML -> loads JS -> renders page
+With SSR:
+Browser -> gets ready HTML from server -> page visible immediately
+
+Benefits of SSR
+✅ Better SEO
+ Search engines can easily crawl content.
+✅ Faster first page load
+ Users see content immediately.
+✅ Better performance on slow devices
+
+Example
+Without SSR
+Initial HTML:
+<body>
+ <app-root></app-root>
+</body>
+Content appears after JavaScript loads.
+With SSR
+Initial HTML already contains:
+<body>
+ <app-root>
+   <h1>Products</h1>
+   <p>List of items...</p>
+ </app-root>
+</body>
+
+When SSR is Useful
+E-commerce sites
+
+
+Marketing pages
+
+
+SEO-heavy apps
+
+
+Content websites
+
+
+
+When SSR may not be necessary
+Internal dashboards
+
+
+Admin panels
+
+
+Apps where SEO doesn't matter
+
+
+
+💡 Since you're working with Angular 16 and SSR errors, you're probably using Angular Universal to enable server-side rendering.
+If you want, I can also explain:
+Angular SSR architecture
+
+
+How Angular Universal works
+
+
+Why @nguniversal/express-engine error happens in Angular 16 (very common issue).
